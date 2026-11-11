@@ -1,6 +1,6 @@
 from pathlib import Path
 from typing import List,Any
-from langchain_community.document_loaders import (PyPDFLoader,TextLoader,CSVLoader,Docx2txtLoader,JSONLoader)
+from langchain_community.document_loaders import PyPDFLoader,TextLoader,CSVLoader,Docx2txtLoader,JSONLoader
 from langchain_community.document_loaders.excel import UnstructuredExcelLoader
 
 def load_all_documents(data_dir:str)-> List[Any]:

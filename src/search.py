@@ -6,7 +6,6 @@ from langchain_groq import ChatGroq
 
 load_dotenv()
 
-
 class RAGSearch:
     def __init__(
         self,
