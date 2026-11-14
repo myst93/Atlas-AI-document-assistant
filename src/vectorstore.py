@@ -20,7 +20,7 @@ class FaissVectorStore:
         
         print(f"[INFO] Loaded embedding model: {embedding_model}")
 
-    def build_from_documents(self, documents:List[Any]):
+    def build_from_documents(self, documents:List[Any]):   #This is the ingestion method 
         # Logic to embed documents and build the index
         print(f"[INFO] Building vector store from {len(documents)} raw documents...")
         emb_pipe=EmbeddingPipeline(model_name=self.embedding_model,chunk_size=self.chunk_size,chunk_overlap=self.chunk_overlap)
@@ -46,7 +46,7 @@ class FaissVectorStore:
         print(f"[INFO] Saved FAISS index and metadata to '{self.persist_dir}'")
 
     def add_embeddings(self, embeddings: np.ndarray, metadatas: List[Any] = None):
-        dim = embeddings.shape[1]
+        dim = embeddings.shape[1]  ## embedding.shape=[number of vectors,number of values in each vector]
         if self.index is None:
             self.index = faiss.IndexFlatL2(dim)
         self.index.add(embeddings)
