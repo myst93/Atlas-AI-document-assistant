@@ -9,3 +9,7 @@ wheels/
 # Virtual environments
 .venv
 .env
+web/node_modules/
+web/dist/
+data/uploads/
+data/chat_history.sqlite3

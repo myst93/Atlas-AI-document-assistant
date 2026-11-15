@@ -12,8 +12,15 @@ dependencies = [
     "langchain>=1.4.9",
     "langchain-community>=0.4.2",
     "langchain-core>=1.7.6",
+    "langchain-groq",
     "pymupdf>=2.1",
     "pypdf>=6.21.4",
+    "sentence-transformers",
+    "faiss-cpu",
+    "python-dotenv",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "python-multipart>=0.0.9",
 ]
 
 [project.scripts]
